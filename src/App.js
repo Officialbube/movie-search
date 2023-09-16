@@ -1,20 +1,20 @@
 import React from "react";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Layout from "./components/layout/Layout";
-import NavBar from "./components/navBar/NavBar";
+
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
 
 
 
 function App() {
   return (
-    <div className="app">
-      <Header/>
-      <Layout/>
-      <Footer/>
-      
-    </div>
+    <BrowserRouter className="app">
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="movie" element={<Movies/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
