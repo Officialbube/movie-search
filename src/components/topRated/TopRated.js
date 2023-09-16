@@ -50,9 +50,9 @@ const TopRated = () => {
   };
 
   return (
-    <div className='grid grid-cols-4 px-[6.12rem] gap-[5rem]'>
+    <div className='md:grid grid-cols-4 md:px-[6.12rem] gap-[5rem]'>
       {movieData.slice(0, 10).map((item) => (
-          <div key={item.id}  className='w-[15rem]'>
+          <div key={item.id}  className='md:w-[15rem] mb-[1.5rem]'>
             <div className='h-[23rem] w-full'>
               <img src={baseURL + imgSize + item.backdrop_path} onClick={handleClick}  className='h-full w-full object-cover' />
             </div>
